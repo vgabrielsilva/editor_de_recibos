@@ -272,7 +272,7 @@ canvas.addEventListener('mousedown', function(e) {
 });
 
 // --- LÓGICA DOS BOTÕES DE PREENCHIMENTO RÁPIDO ---
-
+/*
 const btnHoje = document.getElementById('btnHoje');
 if (btnHoje) {
     btnHoje.addEventListener('click', () => {
@@ -294,3 +294,4 @@ document.querySelectorAll('.btn-assinatura').forEach(btn => {
         inputs.assinatura.dispatchEvent(new Event('input'));
     });
 });
+*/
