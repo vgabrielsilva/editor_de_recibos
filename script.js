@@ -260,6 +260,7 @@ btnBaixar.addEventListener('click', () => {
     document.body.removeChild(link);
 });
 
+/*
 canvas.addEventListener('mousedown', function(e) {
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
@@ -270,9 +271,10 @@ canvas.addEventListener('mousedown', function(e) {
 
     alert(`Coordenadas -> X: ${x}, Y: ${y}`);
 });
+*/
 
 // --- LÓGICA DOS BOTÕES DE PREENCHIMENTO RÁPIDO ---
-/*
+
 const btnHoje = document.getElementById('btnHoje');
 if (btnHoje) {
     btnHoje.addEventListener('click', () => {
@@ -294,4 +296,3 @@ document.querySelectorAll('.btn-assinatura').forEach(btn => {
         inputs.assinatura.dispatchEvent(new Event('input'));
     });
 });
-*/
