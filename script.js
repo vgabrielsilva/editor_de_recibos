@@ -25,7 +25,10 @@ const CONFIG = {
         data_2_mes:    { x: 993, y: 810, fontSize: 45, color: '#000000' },
         data_2_ano:    { x: 1117, y: 810, fontSize: 45, color: '#000000' },
         
-        assinatura_1:  { x: 1826, y: 810, fontSize: 50, color: '#000000', align: 'center' }
+        assinatura_1:  { x: 1826, y: 810, fontSize: 50, color: '#000000', align: 'center' },
+
+        // Adicionado o CPF fixo abaixo da assinatura
+        cpf_1:         { x: 1826, y: 930, fontSize: 30, color: '#000000', align: 'center' }
     }
 };
 
@@ -92,6 +95,9 @@ function renderizarRecibo() {
     }
     
     desenharTexto(dados.assinatura, CONFIG.campos.assinatura_1);
+
+    // Desenha o CPF fixo logo após desenhar a assinatura
+    desenharTexto('CPF: 785.520.441-53', CONFIG.campos.cpf_1);
 }
 
 function desenharTexto(texto, configCampo) {
@@ -267,7 +273,6 @@ canvas.addEventListener('mousedown', function(e) {
 
 // --- LÓGICA DOS BOTÕES DE PREENCHIMENTO RÁPIDO ---
 
-// Preencher Data de Hoje
 const btnHoje = document.getElementById('btnHoje');
 if (btnHoje) {
     btnHoje.addEventListener('click', () => {
@@ -278,17 +283,14 @@ if (btnHoje) {
         
         inputs.data.value = `${dia}/${mes}/${ano}`;
         
-        // Dispara o evento de 'input' para forçar a formatação, o contador e a renderização do Canvas
         inputs.data.dispatchEvent(new Event('input')); 
     });
 }
 
-// Preencher Nomes da Assinatura
 document.querySelectorAll('.btn-assinatura').forEach(btn => {
     btn.addEventListener('click', (e) => {
         inputs.assinatura.value = e.target.getAttribute('data-nome');
         
-        // Dispara o evento de 'input' para atualizar Canvas e o contador
         inputs.assinatura.dispatchEvent(new Event('input'));
     });
 });
