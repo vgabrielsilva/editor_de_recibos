@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preenchedor de Recibo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Gerador de Recibo</h1>
+
+        <section class="form-section">
+            <div class="input-group">
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" maxlength="40" placeholder="Nome do cliente">
+                <small class="contador">0/40</small>
+            </div>
+            <div class="input-group">
+                <label for="valor">Valor (R$):</label>
+                <input type="text" id="valor" maxlength="15" placeholder="Ex: 150,00">
+                <small class="contador">0/15</small>
+            </div>
+            <div class="input-group">
+                <label for="referente">Referente a:</label>
+                <input type="text" id="referente" maxlength="60" placeholder="Serviço prestado ou produto">
+                <small class="contador">0/60</small>
+            </div>
+            <div class="input-group">
+                <label for="data">Data:</label>
+                <input type="text" id="data" maxlength="10" placeholder="DD/MM/AAAA">
+                <small class="contador">0/10</small>
+                <div class="botoes-acao">
+                    <button type="button" id="btnHoje" class="btn-acao">Preencher com data de Hoje</button>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="assinatura">Assinatura (Nome):</label>
+                <input type="text" id="assinatura" maxlength="40" placeholder="Seu nome">
+                <small class="contador">0/40</small>
+                <div class="botoes-acao">
+                    <button type="button" class="btn-acao btn-assinatura"
+                        data-nome="Helen Simone Cirino Pires">Helen</button>
+                    <button type="button" class="btn-acao btn-assinatura"
+                        data-nome="Cleison Johnson de Paula">Cleison</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="preview-section">
+            <h2>Visualização</h2>
+            <div class="canvas-container">
+                <canvas id="reciboCanvas"></canvas>
+            </div>
+            <button id="btnBaixar" class="btn-baixar" disabled>Baixar Recibo</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
