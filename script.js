@@ -7,7 +7,7 @@ const CONFIG = {
         
         cliente_2:     { x: 1060, y: 325, fontSize: 36, color: '#000000' },
         
-        valor_1:       { x: 368, y: 470, fontSize: 32, color: '#000000', align: 'center' },
+        valor_1:       { x: 355, y: 460, fontSize: 40, color: '#000000', align: 'center' },
         
         valor_2:       { x: 1927, y: 196, fontSize: 40, color: '#000000' },
         
