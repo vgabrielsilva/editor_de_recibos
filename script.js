@@ -28,7 +28,7 @@ const CONFIG = {
         assinatura_1:  { x: 1826, y: 810, fontSize: 50, color: '#000000', align: 'center' },
 
         // Adicionado o CPF fixo abaixo da assinatura
-        cpf_1:         { x: 1826, y: 930, fontSize: 30, color: '#000000', align: 'center' }
+        cpf_1:         { x: 1826, y: 930, fontSize: 30, color: '#f8962d', align: 'center' }
     }
 };
 
